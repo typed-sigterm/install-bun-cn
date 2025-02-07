@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.1.1",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@typed-sigterm/eslint-config": "^1.4.1",
+    "eslint": "^9.19.0",
+    "husky": "^9.1.7"
+  }
+}
