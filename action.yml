@@ -10,17 +10,13 @@ outputs: {}
 runs:
   using: composite
   steps:
-    - if: runner.os == 'Linux' || runner.os == 'macOS'
-      shell: bash
+    - if: runner.os == 'Windows'
+      run: |
+        echo "::error title=Windows is not supported yet."
+        exit 1
+    - shell: bash
       run: |
         chmod +x ./install.sh
         ./install.sh
-    - if: runner.os == 'Windows'
-      shell: powershell
-      run: ./install.ps1
-    - shell: bash
-      run: |
         echo "BUN_INSTALL=$HOME/.bun" >> $GITHUB_ENV
         echo "$HOME/.bun/bin" >> $GITHUB_PATH
-        ls -al $HOME/.bun
-        ls -al $HOME/.bun/bin
