@@ -13,7 +13,7 @@ runs:
     - shell: bash
       if: runner.os == 'Windows'
       run: |
-        echo "::error title=Windows is not supported yet."
+        echo "::error title=Unsupported OS::Windows is not supported yet."
         exit 1
     - shell: bash
       run: |
