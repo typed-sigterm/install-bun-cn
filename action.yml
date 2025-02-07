@@ -12,7 +12,9 @@ runs:
   steps:
     - if: runner.os == 'Linux' || runner.os == 'macOS'
       shell: bash
-      run: ./install.sh
+      run: |
+        chmod +x ./install.sh
+        ./install.sh
     - if: runner.os == 'Windows'
       shell: powershell
       run: ./install.ps1
@@ -20,3 +22,5 @@ runs:
       run: |
         echo "BUN_INSTALL=$HOME/.bun" >> $GITHUB_ENV
         echo "$HOME/.bun/bin" >> $GITHUB_PATH
+        ls -al $HOME/.bun
+        ls -al $HOME/.bun/bin
