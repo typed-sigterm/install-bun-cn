@@ -10,7 +10,8 @@ outputs: {}
 runs:
   using: composite
   steps:
-    - if: runner.os == 'Windows'
+    - shell: bash
+      if: runner.os == 'Windows'
       run: |
         echo "::error title=Windows is not supported yet."
         exit 1

@@ -15,3 +15,9 @@ powershell -c "irm https://gitee.com/typed-sigterm/install-bun-cn/raw/main/insta
 ```
 
 脚本内容可以在本仓库内找到。
+
+## GitHub Actions
+
+正常用 `uses` 引用本仓库即可。
+
+此方法暂不支持 Windows。
