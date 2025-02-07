@@ -1,0 +1,18 @@
+name: Install Bun from CNPM
+description: For faster installation of Bun in China.
+
+inputs:
+outputs:
+
+runs:
+  using: composite
+  steps:
+    - if: runner.os == 'Linux' || runner.os == 'macOS'
+      shell: bash
+      run: ./install.sh
+    - if: runner.os == 'Windows'
+      shell: powershell
+      run: ./install.ps1
+    - run: |
+        echo "BUN_INSTALL=$HOME/.bun" >> $GITHUB_ENV
+        echo "$HOME/.bun/bin" >> $GITHUB_PATH
