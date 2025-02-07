@@ -1,8 +1,8 @@
 name: Install Bun from CNPM
 description: For faster installation of Bun in China.
 
-inputs:
-outputs:
+inputs: {}
+outputs: {}
 
 runs:
   using: composite
