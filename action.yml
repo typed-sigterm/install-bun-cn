@@ -17,6 +17,7 @@ runs:
         exit 1
     - shell: bash
       run: |
+        cd ${{ github.action_path }}
         chmod +x ./install.sh
         ./install.sh
         echo "BUN_INSTALL=$HOME/.bun" >> $GITHUB_ENV
