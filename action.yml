@@ -1,5 +1,8 @@
 name: Install Bun from CNPM
 description: For faster installation of Bun in China.
+branding:
+  icon: play-circle
+  color: red
 
 inputs: {}
 outputs: {}
@@ -13,6 +16,7 @@ runs:
     - if: runner.os == 'Windows'
       shell: powershell
       run: ./install.ps1
-    - run: |
+    - shell: bash
+      run: |
         echo "BUN_INSTALL=$HOME/.bun" >> $GITHUB_ENV
         echo "$HOME/.bun/bin" >> $GITHUB_PATH
